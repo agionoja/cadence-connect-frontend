@@ -1,3 +1,3 @@
-export default function Notification() {
+export default function Notifications() {
   return <></>;
 }
