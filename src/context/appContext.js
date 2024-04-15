@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { UserContext } from "./UserProvider.jsx";
 import { SettingsContext } from "./SettingsProvider.jsx";
 import { AuthContext } from "./AuthProvider.jsx";
 import { SignFormContext } from "./SignFormProvider.jsx";
@@ -9,13 +8,6 @@ function checkContext(context, message) {
     throw new Error(message);
   }
   return context;
-}
-
-export function useUser() {
-  return checkContext(
-    useContext(UserContext),
-    "SettingsContext was used outside the SettingsProvider",
-  );
 }
 
 export function useSettings() {

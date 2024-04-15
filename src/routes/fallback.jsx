@@ -19,12 +19,14 @@ import Details from "../components/settings/Details.jsx";
 import ChangePassword from "../components/settings/security/ChangePassword.jsx";
 import DeleteAccount from "../components/settings/security/DeleteAccount.jsx";
 
+/*This is just the first implementation of my routing system before I created
+ * separate route file objects for each children*/
 export default {
   path: "/",
   element: <RootBox />,
   children: [
     {
-      path: "service/:id",
+      path: "service-description/:id",
       element: <Description />,
     },
     {

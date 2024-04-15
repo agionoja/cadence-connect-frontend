@@ -8,6 +8,9 @@ export default {
   path: "account",
   element: <ProtectedBox />,
   children: [
+    // objects representing nested routes
+    chat,
+    settings,
     {
       path: "notifications",
       element: <Notifications />,
@@ -16,8 +19,5 @@ export default {
       path: "support",
       element: <Support />,
     },
-    // objects representing nested routes
-    chat,
-    settings,
   ],
 };

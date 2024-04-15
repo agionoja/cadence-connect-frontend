@@ -11,7 +11,6 @@ export default {
   element: <Settings />,
   children: [
     {
-      index: true,
       path: "profile",
       element: <Profile />,
     },
