@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import Input from "./components/Input.jsx";
+import AddImagePopup from "./components/AddImagePopup.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Input />
+    <App />
   </React.StrictMode>,
 );

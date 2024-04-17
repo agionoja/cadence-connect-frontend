@@ -1,6 +1,6 @@
-import { IoMdClose } from "react-icons/io";
 import PropTypes from "prop-types";
-import { useSmallScreen } from "../hooks/useSmallScreen.js";
+import { IoMdClose } from "react-icons/io";
+import { useMinScreen } from "../hooks/customHooks.js";
 
 CloseBtn.propTypes = {
   onClick: PropTypes.func,
@@ -8,7 +8,7 @@ CloseBtn.propTypes = {
 };
 
 export default function CloseBtn({ onClick, className }) {
-  const isMobile = useSmallScreen();
+  const isMobile = useMinScreen(400);
 
   return (
     <button
