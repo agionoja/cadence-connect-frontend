@@ -6,7 +6,7 @@ import Contact from "../pages/Contact.jsx";
 import FAQ from "../pages/FAQ.jsx";
 import SignIn from "../pages/SignIn.jsx";
 import SignUp from "../pages/SignUp.jsx";
-import ProtectedBox from "../components/ProtectedBox.jsx";
+import AccountBox from "../pages/UserViews/AccountBox.jsx";
 import Notifications from "../pages/UserViews/Notifications.jsx";
 import Support from "../pages/UserViews/Support.jsx";
 import Chat from "../components/chat/Chat.jsx";
@@ -55,7 +55,7 @@ export default {
     },
     {
       path: "account",
-      element: <ProtectedBox />,
+      element: <AccountBox />,
       children: [
         {
           path: "notifications",

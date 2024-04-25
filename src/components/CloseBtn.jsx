@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { IoMdClose } from "react-icons/io";
-import { useMinScreen } from "../hooks/customHooks.js";
+import useMinScreen from "../custom-hooks/useMinScreen.js";
 
 CloseBtn.propTypes = {
   onClick: PropTypes.func,

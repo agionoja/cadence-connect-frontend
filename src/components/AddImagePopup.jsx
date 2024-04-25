@@ -1,22 +1,27 @@
-// import { RiImageAddLine } from "react-icons/ri";
-// import { MdOutlineAddAPhoto } from "react-icons/md";
 import { CiCamera } from "react-icons/ci";
 import { CiImageOn } from "react-icons/ci";
-import CloseBtn from "./CloseBtn.jsx";
-import { useMinScreen } from "../hooks/customHooks.js";
+import useMinScreen from "../custom-hooks/useMinScreen.js";
 import Modal from "./Modal.jsx";
+import PropTypes from "prop-types";
 
-export default function AddImagePopup() {
+AddImagePopup.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+};
+
+export default function AddImagePopup({ onClose, isOpen }) {
   const isMobile = useMinScreen();
 
   return (
     <div>
       <Modal
+        open={isOpen}
+        onClose={onClose}
+        closeBtnPosition={"absolute left-6 top-6"}
         className={
-          "rounded-4xl w-[90%] max-w-[27rem] bg-white  px-20 pb-14 pt-20 md:w-full md:pt-[6.5rem]"
+          "w-[90%] max-w-[27rem] rounded-4xl bg-white  px-20 pb-14 pt-20 md:w-full md:pt-[6.5rem]"
         }
       >
-        <CloseBtn className={"absolute left-6 top-6 "} />
         <div className={"flex justify-between"}>
           <button className={"add-image-btn"}>
             <CiImageOn size={isMobile ? 40 : 45} />
