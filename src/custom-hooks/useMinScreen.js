@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function useMinScreen(minScreen) {
+export default function useMinScreen(minScreen) {
   const [isMobile, setIsMobile] = useState(
     window.innerWidth <= minScreen || window.innerWidth <= 500,
   );
@@ -8,7 +8,7 @@ export function useMinScreen(minScreen) {
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= minScreen || window.innerWidth <= 500);
-      console.log("handleResize function is triggered");
+      // console.log("handleResize function is triggered");
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);

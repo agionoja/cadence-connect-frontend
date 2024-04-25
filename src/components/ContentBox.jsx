@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 
-ContextBox.propTypes = {
+ContentBox.propTypes = {
   children: PropTypes.node.isRequired,
   padding: PropTypes.string,
   paddingTop: PropTypes.string,
   paddingBottom: PropTypes.string,
 };
 
-export default function ContextBox({
+export default function ContentBox({
   children,
   padding = "p-4",
   paddingTop = "",
