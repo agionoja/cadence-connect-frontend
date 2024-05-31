@@ -1,0 +1,3 @@
+{
+  "EXCLUDED_ROOT_LAYOUT_ROUTE": ["sign", "reset-password", "forgot-password"]
+}
