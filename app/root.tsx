@@ -23,7 +23,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <div className={"mx-auto max-w-screen-2xl"}>{children}</div>
         <ScrollRestoration />
         <Scripts />
       </body>

@@ -1,5 +1,6 @@
 import { Outlet } from "@remix-run/react";
-import Header from "~/components/header";
+import Footer from "~/components/footer";
+import Header from "~/routes/_landing/header";
 
 export default function LandingLayout() {
   return (
@@ -7,6 +8,7 @@ export default function LandingLayout() {
       <div className={"min-h-screen w-full"}>
         <Header />
         <Outlet />
+        <Footer />
       </div>
     </>
   );
