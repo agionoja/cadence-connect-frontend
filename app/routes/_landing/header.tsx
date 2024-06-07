@@ -1,6 +1,9 @@
+import { useLocation } from "@remix-run/react";
 import MainHeader from "~/components/main-header";
 
 export default function Header() {
+  const location = useLocation();
+
   return (
     <MainHeader bgClass={"bg-header-bg"}>
       <div className="flex flex-col gap-4">
@@ -17,6 +20,7 @@ export default function Header() {
           Together.
         </h2>
       </div>
+      {location.pathname === "/" && <></>}
     </MainHeader>
   );
 }

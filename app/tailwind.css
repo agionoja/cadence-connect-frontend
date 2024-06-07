@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .main-nav-item {
-  @apply px-3 py-2;
+  @apply px-3 py-2 font-semibold;
 }
